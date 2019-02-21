@@ -1,0 +1,37 @@
+---
+- name: Deploy Laravel
+  hosts: webservers
+  vars:
+    ansistrano_deploy_from: "{{ playbook_dir }}/../"
+    ansistrano_deploy_to: "{{ projects_path }}"
+    ansistrano_keep_releases: 3
+    ansistrano_deploy_via: git
+    ansistrano_git_repo: "{{ repo_url }}"
+    ansistrano_git_branch: "{{ repo_branch }}"
+    ansistrano_git_repo_tree: "project"
+    ansistrano_git_identity_key_path: "~/.ssh/id_rsa"
+
+    # If specified, the application will be rolled back to this release version; previous release otherwise.
+    ansistrano_rollback_to_release: ""
+    ansistrano_remove_rolled_back: yes
+    ansistrano_allow_anonymous_stats: no
+
+    # Hooks: custom tasks if you need them
+    ansistrano_before_symlink_tasks_file: "{{ playbook_dir }}/config/before-symlink.yml"
+    ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/config/after-symlink.yml"
+
+    ansistrano_shared_paths:
+      - public/uploads
+      - storage
+
+    composer_path: "{{ ansistrano_deploy_to }}/composer.phar"
+    composer_options: '--no-dev --optimize-autoloader --no-interaction'
+    composer_self_update: true
+
+    owner: www-data
+    group: www-data
+
+    php_path: /usr/bin/php
+
+  roles:
+      - { role: carlosbuenosvinos.ansistrano-deploy }

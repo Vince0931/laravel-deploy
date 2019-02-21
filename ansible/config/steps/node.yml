@@ -1,0 +1,9 @@
+___
+- name: Install node modules
+  command: yarn
+  args:
+    chdir: "{{ ansistrano_release_path.stdout }}"
+- name: Build Javascript
+  command: yarn prod
+  args:
+    chdir: "{{ ansistrano_release_path.stdout }}"

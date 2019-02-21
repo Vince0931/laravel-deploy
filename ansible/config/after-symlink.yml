@@ -1,0 +1,3 @@
+- import_tasks: "config/steps/chmod.yml"
+- import_tasks: "config/steps/chown.yml"
+- import_tasks: "config/steps/migrate.yml"

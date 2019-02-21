@@ -1,0 +1,4 @@
+- import_tasks: "config/steps/copy_env.yml"
+- import_tasks: "config/steps/composer.yml"
+- import_tasks: "config/steps/node.yml"
+- import_tasks: "config/steps/clear_cache_and_optimize.yml"

@@ -1,0 +1,4 @@
+---
+projects_path: /var/www/laravel
+repo_branch: master
+env: prod

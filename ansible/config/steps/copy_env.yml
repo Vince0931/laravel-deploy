@@ -1,0 +1,6 @@
+---
+- name: Copy .env.example
+  copy:
+    src: "{{ ansistrano_release_path.stdout }}/.env.{{env}}"
+    dest: "{{ ansistrano_release_path.stdout }}/.env"
+    remote_src: True
