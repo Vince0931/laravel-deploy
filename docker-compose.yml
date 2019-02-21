@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  ansible:
+    build: docker/ansible
+    working_dir: /ansible
+    volumes:
+      - ./ansible:/ansible
+      - ${SSH_AUTH_SOCK}:/ssh-agent
+      - ${HOME}/.ssh/known_hosts:/root/.ssh/known_hosts
+      - ~/.ssh:/root/.ssh
+    environment:
+      ANSIBLE_REMOTE_USER: ${USER}
+      SSH_AUTH_SOCK: /ssh-agent
