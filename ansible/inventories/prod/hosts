@@ -1,2 +1,2 @@
 [webservers]
-host_1 ansible_host=ipOrDomain ansible_private_key_file=~/.ssh/id_rsa ansible_user=prod ansible_port=21
+host_1 ansible_host=35.246.195.198 ansible_private_key_file=~/.ssh/id_rsa ansible_user=root ansible_port=21
