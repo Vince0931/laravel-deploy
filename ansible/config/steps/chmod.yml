@@ -3,7 +3,7 @@
 - name: Chmod Storage directory
   file:
     path: "{{ item }}"
-    mode: 0777
+    mode: 0755
     state: directory
   with_items:
     - "{{ ansistrano_shared_path }}/storage/app/public"

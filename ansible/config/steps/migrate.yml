@@ -1,4 +1,4 @@
 ---
-- name: artisan migrate --force
+- name: artisan migrate
   shell: chdir={{ ansistrano_release_path.stdout }}
-    {{ php_path }} artisan migrate --force
+    {{ php_path }} artisan migrate

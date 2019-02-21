@@ -1,5 +1,4 @@
 FROM alpine:3.7
-MAINTAINER Mickael VILLERS <mickael@keyops.tech>
 
 RUN apk update \
     && apk add --no-cache --virtual .build-dependencies \

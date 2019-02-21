@@ -1,5 +1,5 @@
 ---
-- name: Copy .env.example
+- name: Copy .env.prod
   copy:
     src: "{{ ansistrano_release_path.stdout }}/.env.{{env}}"
     dest: "{{ ansistrano_release_path.stdout }}/.env"

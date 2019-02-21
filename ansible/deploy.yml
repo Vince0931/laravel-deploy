@@ -34,4 +34,4 @@
     php_path: /usr/bin/php
 
   roles:
-      - { role: carlosbuenosvinos.ansistrano-deploy }
+    - { role: carlosbuenosvinos.ansistrano-deploy }
