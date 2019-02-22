@@ -8,7 +8,7 @@ RUN apk update \
         build-base \
     && apk add sudo python py-pip openssl ca-certificates \
     && pip install --upgrade pip cffi \
-    && pip install cryptography \
+    && pip install cryptography==2.4.2 \
     && pip install ansible \
     && ansible-galaxy install ansistrano.deploy ansistrano.rollback \
     && apk del .build-dependencies \

@@ -11,10 +11,10 @@
   shell: chdir={{ ansistrano_release_path.stdout }}
     {{ php_path }} artisan view:clear
 
-- name: artisan optimize
-  shell: chdir={{ ansistrano_release_path.stdout }}
-    {{ php_path }} artisan optimize
+#- name: artisan optimize
+#  shell: chdir={{ ansistrano_release_path.stdout }}
+#    {{ php_path }} artisan optimize
 
-- name: artisan route:cache
-  shell: chdir={{ ansistrano_release_path.stdout }}
-    {{ php_path }} artisan route:cache
+#- name: artisan route:cache
+#  shell: chdir={{ ansistrano_release_path.stdout }}
+#    {{ php_path }} artisan route:cache

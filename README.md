@@ -30,3 +30,7 @@ service ssh restart
 
 docker-compose build
 make deploy-prod
+
+copy id_rsa sur server distant
+chmod 400 ~/.ssh/id_rsa
+
