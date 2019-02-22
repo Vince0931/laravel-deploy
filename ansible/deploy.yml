@@ -9,7 +9,7 @@
     ansistrano_git_repo: "{{ repo_url }}"
     ansistrano_git_branch: "{{ repo_branch }}"
     ansistrano_git_repo_tree: "project"
-    ansistrano_git_identity_key_path: "~/.ssh/id_rsa"
+    # ansistrano_git_identity_key_path: "~/.ssh/id_rsa"
 
     # If specified, the application will be rolled back to this release version; previous release otherwise.
     ansistrano_rollback_to_release: ""
@@ -34,4 +34,4 @@
     php_path: /usr/bin/php
 
   roles:
-    - { role: carlosbuenosvinos.ansistrano-deploy }
+    - { role: ansistrano.deploy }
